@@ -1,11 +1,28 @@
-#sidebar{
-    min-width: 250px;
-    max-width: 250px;
-    min-height: 100vh;
-    &__header{
-
+.sidebar{
+    // min-width: 200px;
+    // max-width: 200px;
+    // height: 100vh;
+    // background: #7386D5;
+    // color: #fff;
+    // transition: all 0.3s;
+    &.active{
+      margin-left: -200px;
     }
-    .home{
-        
+    &__header{
+      height: 100px;
+      width: 100%;
+    }
+    &__content{
+      text-align: center;
+      a {
+        color: #fff;
+      }
+    }
+    &__sidenav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      background: rgba(255, 0, 0, 0.5);
     }
 }

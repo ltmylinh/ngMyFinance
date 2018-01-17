@@ -6,22 +6,11 @@ const { AotPlugin } = require('@ngtools/webpack');
 const rules = [
     {test : /\.html$/, loader: 'html-loader'},
     {test: /\.scss$/, loaders: ['raw-loader', 'sass-loader']},
-    {test: /\.(jpe?g|png|gif|svg|ico)$/i, loader: 'file-loader'},
+    {test: /\.(jpe?g|png|gif|ico)$/i, loader: 'file-loader'},
     {
-      // Capture eot, ttf, woff, and woff2
-      test: /\.(eot|ttf|woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
-      use: {
-        loader: "file-loader",
-        options: {
-          name: "[name].[ext]"
-        }
-      }
-    },
-    // {test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,loader: 'file-loader?name=fonts/[name].[ext]'}
-    // {test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=application/font-woff'},
-    // {test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=application/font-woff'},
-    // {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=application/octet-stream'},
-    // {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader'}
+      test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+      loader: 'file-loader?name=fonts/[name].[ext]'
+    }
 ];
 
 const plugins = [

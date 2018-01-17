@@ -6,14 +6,16 @@ import { Component, ViewEncapsulation } from '@angular/core';
     encapsulation: ViewEncapsulation.None,
     template: `
         <div class="wrapper">
-            <app-header></app-header>
+            <app-header (toggleNav)="clickToggleNav()"></app-header>
             <app-nav></app-nav>
-            <div class="container">
-                <h1>hello</h1>
-            </div>
+
         </div>
     `
 })
 export class AppComponent {
     constructor() {}
+
+    clickToggleNav(){
+
+    }
 }
