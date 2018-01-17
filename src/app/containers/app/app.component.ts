@@ -6,16 +6,22 @@ import { Component, ViewEncapsulation } from '@angular/core';
     encapsulation: ViewEncapsulation.None,
     template: `
         <div class="wrapper">
-            <app-header (toggleNav)="clickToggleNav()"></app-header>
-            <app-nav></app-nav>
+            <app-header
+              (toggleNav)="clickToggleNav()">
+            </app-header>
+            <app-nav>
+            </app-nav>
 
         </div>
     `
 })
 export class AppComponent {
-    constructor() {}
 
-    clickToggleNav(){
+  isOpenNav = true;
 
-    }
+  constructor() {}
+
+  clickToggleNav(){
+    this.isOpenNav = !this.isOpenNav;
+  }
 }

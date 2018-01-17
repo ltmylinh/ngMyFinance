@@ -5,6 +5,9 @@
     },
     "compilerOptions": {
         "baseUrl": ".",
+        "paths": {
+          "store": ["src/store.ts"]
+        },
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "importHelpers": true,
