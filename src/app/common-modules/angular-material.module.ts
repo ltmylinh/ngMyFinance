@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 
 //Material
+import {CdkTableModule} from '@angular/cdk/table';
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -37,6 +38,7 @@ import {
 
 @NgModule({
   exports: [
+    CdkTableModule,
     MatAutocompleteModule,
     MatButtonModule,
     MatButtonToggleModule,

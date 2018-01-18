@@ -9,19 +9,13 @@ import { Subscription } from 'rxjs/Subscription';
 @Component({
     selector: 'app-header',
     styleUrls: ['header.component.scss'],
-    template: `
-        <div class="header">
-          <mat-toolbar color="primary" class="header__toolbar">
-            <button mat-icon-button (click)="onToggleSideNav()"><mat-icon>menu</mat-icon></button>
-            <h1>My First App</h1>
-          </mat-toolbar>
-        </div>
-    `
+    templateUrl: 'header.component.html'
 })
 export class AppHeaderComponent implements OnInit, OnDestroy{
 
   open: boolean;
   subscription: Subscription;
+  toggleSearch: boolean = false;
 
   constructor(
     private headerService: AppHeaderService,
@@ -41,5 +35,9 @@ export class AppHeaderComponent implements OnInit, OnDestroy{
   onToggleSideNav(){
     const newValue = !this.open;
     this.headerService.updateIsOpenNav(newValue);
+  }
+
+  toggle(){
+    this.toggleSearch = !this.toggleSearch;
   }
 }

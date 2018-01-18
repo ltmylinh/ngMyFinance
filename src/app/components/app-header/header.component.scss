@@ -3,4 +3,25 @@
     position: fixed;
     z-index: 2;
   }
+  &__logo{
+    img{
+      max-width: 100px;
+      max-height: 50px;
+    }
+  }
+  &__search{
+    flex-grow: 2;
+    display: flex;
+    justify-content: flex-end;
+    &__form{
+      max-height: 36px;
+    }
+  }
+  &__search__input.mat-form-field {
+    font-size: 0.75rem;
+    color: #ffffde;
+    .mat-form-field-underline{
+      background-color: #ffffde;
+    }
+  }
 }
