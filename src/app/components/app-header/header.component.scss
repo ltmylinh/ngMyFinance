@@ -9,26 +9,45 @@
   &__toolbar{
     position: fixed;
     z-index: 2;
+    background-color: #fff;
+    color: #aaacc2;
+    padding: 0;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
   }
-  &__logo{
-    img{
-      max-width: 100px;
-      max-height: 50px;
-    }
-  }
-  &__search{
-    flex-grow: 2;
+  &__toggle-button{
+    width: 64px;
+    height: 64px;
+    background: #673ab7;
+    color: rgba(255,255,255,.87);
     display: flex;
-    justify-content: flex-end;
-    &__form{
-      max-height: 36px;
+    .mat-icon-button{
+      width: 100%;
+      height: 100%;
     }
   }
-  &__search__input.mat-form-field {
-    font-size: 0.75rem;
-    color: #ffffde;
-    .mat-form-field-underline{
-      background-color: #ffffde;
+  &__right{
+    display: flex;
+    flex-grow: 2;
+    &__logo{
+      img{
+        max-width: 100px;
+        max-height: 50px;
+      }
+    }
+    &__search{
+      flex-grow: 2;
+      display: flex;
+      justify-content: flex-end;
+      color: #676c7b;
+      &__form{
+        max-height: 36px;
+      }
+    }
+    &__search__input.mat-form-field {
+      font-size: 0.75rem;
+      .mat-form-field-underline{
+        background-color: #ffffde;
+      }
     }
   }
 }

@@ -5,10 +5,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
-    background: rgba(255, 0, 0, 0.5);
+    width: 64px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
     .mat-list-item {
-      color: #ffffde;
+      color: #aaacc2;
+      &.active, &:hover{
+        color: #EF5350;
+        opacity: 0.8;
+      }
     }
   }
 }
