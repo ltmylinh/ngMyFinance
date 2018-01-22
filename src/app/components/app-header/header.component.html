@@ -1,26 +1,26 @@
-<div class="header">
-  <mat-toolbar color="primary" class="header__toolbar">
-    <button mat-icon-button (click)="onToggleSideNav()"><mat-icon>menu</mat-icon></button>
-    <a class="header__logo">
-      <img src="/assets/images/logo.png" alt="My Finance" />
-    </a>
-    <div class="header__search">
-      <form *ngIf="toggleSearch" class="header__search__form">
-        <button type="button" (click)="search()" mat-icon-button>
-            <mat-icon>search</mat-icon>
-        </button>
-        <mat-form-field class="header__search__input">
-            <input matInput placeholder="Search">
-        </mat-form-field>
-        <button type="button" (click)="toggle()" mat-icon-button>
-            <mat-icon>close</mat-icon>
-        </button>
-      </form>
-      <button (click)="toggle()" mat-button *ngIf="!toggleSearch">
+
+<mat-toolbar color="primary" class="header__toolbar">
+  <button mat-icon-button (click)="onToggleSideNav()"><mat-icon>menu</mat-icon></button>
+  <a class="header__logo">
+    <img src="/assets/images/logo.png" alt="My Finance" />
+  </a>
+  <div class="header__search">
+    <form *ngIf="toggleSearch" class="header__search__form">
+      <button type="button" (click)="search()" mat-icon-button>
           <mat-icon>search</mat-icon>
-          Search
       </button>
-      <a class="header_search_signin" mat-button>Signin</a>
-    </div>
-  </mat-toolbar>
-</div>
+      <mat-form-field class="header__search__input">
+          <input matInput placeholder="Search">
+      </mat-form-field>
+      <button type="button" (click)="toggle()" mat-icon-button>
+          <mat-icon>close</mat-icon>
+      </button>
+    </form>
+    <button (click)="toggle()" mat-button *ngIf="!toggleSearch">
+        <mat-icon>search</mat-icon>
+        Search
+    </button>
+    <a class="header_search_signin" mat-button>Signin</a>
+  </div>
+</mat-toolbar>
+

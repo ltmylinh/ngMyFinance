@@ -6,15 +6,14 @@ import { Router } from '@angular/router';
     styleUrls: ['app.component.scss'],
     encapsulation: ViewEncapsulation.None,
     template: `
-      <div class="wrapper">
+      <div class="mat-app-background basic-container">
+        <div class="container">
           <app-header
-            (toggleNav)="clickToggleNav()">
+          (toggleNav)="clickToggleNav()">
           </app-header>
           <app-nav>
           </app-nav>
-          <div class="main-container">
-            <router-outlet></router-outlet>
-          </div>
+        </div>
       </div>
     `
 })
