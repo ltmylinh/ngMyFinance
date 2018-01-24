@@ -12,7 +12,20 @@
   left: 0;
   right: 0;
   background-color: #f2f3f8;
-  > * {
-    flex: 1 100%;
+  // > * {
+  //   flex: 1 100%;
+  // }
+  .mat-drawer-container{
+    background-color: inherit;
+    .main-container{
+      padding-top: 64px;
+      // display: flex;
+      // width: 100%;
+      // align-items: center;
+      // flex-direction: row;
+      > * {
+        width: 100%;
+      }
+    }
   }
 }
