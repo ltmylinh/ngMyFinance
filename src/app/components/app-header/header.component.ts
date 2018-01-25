@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Output, EventEmitter } from '@angular/core';
 
 import { Store } from 'store';
 import { AppHeaderService } from './../shared/app-header/app-header.service';
@@ -12,6 +12,8 @@ import { Subscription } from 'rxjs/Subscription';
     templateUrl: 'header.component.html'
 })
 export class AppHeaderComponent implements OnInit, OnDestroy{
+  @Output()
+    logout = new EventEmitter<any>();
 
   open: boolean;
   subscription: Subscription;
@@ -39,5 +41,9 @@ export class AppHeaderComponent implements OnInit, OnDestroy{
 
   toggle(){
     this.toggleSearch = !this.toggleSearch;
+  }
+
+  onLogout(){
+    this.logout.emit();
   }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'google-login',
@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   template: `
     <div class="google-login">
       <div class="row no-gutters">
-        <button type="button" mat-raised-button class="btn btn-sm btn-block">
+        <button type="button" mat-raised-button class="btn btn-sm btn-block" (click)="onGoogleLogin()">
           <mat-icon>google</mat-icon> Login with Google
         </button>
       </div>
@@ -14,5 +14,12 @@ import { Component } from '@angular/core';
   `
 })
 export class GoogleLoginComponent {
+  @Output()
+    gLogin = new EventEmitter<any>();
+
   constructor() {}
+
+  onGoogleLogin(){
+    this.gLogin.emit();
+  }
 }
