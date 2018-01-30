@@ -8,4 +8,10 @@
   h1{
     font-size: 1.5rem;
   }
+  .error{
+    color: #ff0000;
+  }
+  .ng-invalid.ng-touched{
+    border-color: #ff0000;
+  }
 }

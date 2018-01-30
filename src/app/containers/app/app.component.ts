@@ -16,8 +16,12 @@ import { AuthService, User } from './../../auth/shared/services/auth/auth.servic
       <div class="mat-app-background basic-container">
         <div class="container-fluid pl-0 pr-0">
           <app-header
-          (toggleNav)="clickToggleNav()"
-          (logout)="logoutUser()">
+          (toggleNav)="clickToggleNav()">
+            <div class="auth-buttons">
+              <a mat-raised-button *ngIf="!(user$ | async)?.authenticated" class="header__right__search_signin auth-button" routerLink="auth/login">Login</a>
+              <a mat-raised-button color="warn" *ngIf="!(user$ | async)?.authenticated" class="header__right__search_signin auth-button" routerLink="auth/register">Register</a>
+              <button mat-icon-button *ngIf="(user$ | async)?.authenticated" class="auth-button" (click)="onLogout()">Logout</button>
+            </div>
           </app-header>
           <app-nav>
           </app-nav>
@@ -50,7 +54,7 @@ export class AppComponent implements OnInit, OnDestroy{
     this.isOpenNav = !this.isOpenNav;
   }
 
-  logoutUser(){
+  onLogout(){
     this.authService.signout();
   }
 }

@@ -53,6 +53,10 @@ export class AuthService {
     return this.af.auth.signInWithPopup(provider);
   }
 
+  loginWithAccount(email: string, password: string){
+    return this.af.auth.signInWithEmailAndPassword(email, password);
+  }
+
   signout(){
     this.af.auth.signOut();
   }

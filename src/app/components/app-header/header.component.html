@@ -23,8 +23,7 @@
               <mat-icon>search</mat-icon>
               Search
           </button>
-          <a class="header__right__search_signin" mat-button routerLink="auth/login">Signin</a>
-          <button mat-icon-button type="button" (click)="onLogout()">Logout</button>
+          <ng-content select=".auth-buttons"></ng-content>
         </div>
   </div>
 </mat-toolbar>

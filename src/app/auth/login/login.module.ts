@@ -11,7 +11,7 @@ import { FacebookLoginComponent } from './components/facebook/facebook-login.com
 import { GoogleLoginComponent } from './components/google/google-login.component';
 
 //shared module
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../../auth/shared/shared.module';
 import { AngularMaterialModule } from './../../common-modules/angular-material.module';
 
 

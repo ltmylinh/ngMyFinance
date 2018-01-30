@@ -12,8 +12,6 @@ import { Subscription } from 'rxjs/Subscription';
     templateUrl: 'header.component.html'
 })
 export class AppHeaderComponent implements OnInit, OnDestroy{
-  @Output()
-    logout = new EventEmitter<any>();
 
   open: boolean;
   subscription: Subscription;
@@ -41,9 +39,5 @@ export class AppHeaderComponent implements OnInit, OnDestroy{
 
   toggle(){
     this.toggleSearch = !this.toggleSearch;
-  }
-
-  onLogout(){
-    this.logout.emit();
   }
 }
