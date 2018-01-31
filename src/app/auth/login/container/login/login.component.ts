@@ -8,14 +8,18 @@ import { AuthService } from '../../../shared/services/auth/auth.service';
   selector: 'login',
   styleUrls: ['login.component.scss'],
   template: `
-    <div class="login">
+    <div class="login gl-form">
       <div class="mx-auto rounded">
         <auth-form (submitted)="loginAccount($event)">
-          <h1>Login</h1>
+          <h1>Log in to my app</h1>
           <button mat-raised-button color="primary" type="submit" class="btn btn-sm btn-block">Login</button>
+          <div class="error">{{error}}</div>
         </auth-form>
         <google-login (gLogin)="googleLogin()"></google-login>
         <facebook-login (fbLogin)="facebookLogin()"></facebook-login>
+        <div class="footnote">
+          Don't have an account? <a routerLink="/auth/register">Sign up</a>
+        </div>
       </div>
     </div>
   `

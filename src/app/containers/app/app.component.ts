@@ -20,7 +20,7 @@ import { AuthService, User } from './../../auth/shared/services/auth/auth.servic
             <div class="auth-buttons">
               <a mat-raised-button *ngIf="!(user$ | async)?.authenticated" class="header__right__search_signin auth-button" routerLink="auth/login">Login</a>
               <a mat-raised-button color="warn" *ngIf="!(user$ | async)?.authenticated" class="header__right__search_signin auth-button" routerLink="auth/register">Register</a>
-              <button mat-icon-button *ngIf="(user$ | async)?.authenticated" class="auth-button" (click)="onLogout()">Logout</button>
+              <button mat-raised-button *ngIf="(user$ | async)?.authenticated" class="auth-button" (click)="onLogout()">Logout</button>
             </div>
           </app-header>
           <app-nav>

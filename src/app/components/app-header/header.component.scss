@@ -38,9 +38,14 @@
       flex-grow: 2;
       display: flex;
       justify-content: flex-end;
+      align-items: center;
       color: #676c7b;
       &__form{
         max-height: 36px;
+      }
+      .auth-buttons{
+        margin-left: 10px;
+        margin-right: 10px;
       }
     }
     &__search__input.mat-form-field {

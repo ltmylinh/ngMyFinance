@@ -6,8 +6,10 @@ import { DashboardComponent } from './container/dashboard/dashboard.component';
 
 import { SharedModule } from './shared/shared.module';
 
+import { AuthGuard } from './../auth/guard/guard.service';
+
 const ROUTES: Routes = [
-  { path: 'dashboard', component: DashboardComponent}
+  { path: 'dashboard', canActivate: [AuthGuard], component: DashboardComponent}
 ];
 
 @NgModule({
@@ -19,6 +21,6 @@ const ROUTES: Routes = [
   declarations: [
     DashboardComponent
   ],
-  providers: []
+  providers: [AuthGuard]
 })
 export class DashboardModule {}

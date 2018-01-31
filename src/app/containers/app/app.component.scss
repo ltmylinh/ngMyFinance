@@ -12,9 +12,6 @@
   left: 0;
   right: 0;
   background-color: #f2f3f8;
-  // > * {
-  //   flex: 1 100%;
-  // }
   .mat-drawer-container{
     background-color: inherit;
     .main-container{
@@ -26,6 +23,40 @@
       > * {
         width: 100%;
       }
+    }
+  }
+  .gl-form{
+    margin-top: 2rem;
+    font-size: 0.75rem;
+    > * {
+      background-color: #fff;
+      box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      width: 30%;
+    }
+    .frm__header, .frm__footer{
+      background-color: #FBE9E7;
+      padding: 0 20px;
+    }
+    .frm__header{
+      border-bottom: 1px solid #607D8B;
+      h1{
+        font-size: 1.5em;
+        line-height: 2.5em;
+        margin: 0;
+      }
+    }
+    .frm__footer{
+      border-top: 1px solid #607D8B;
+      font-size: 1em;
+      line-height: 3.5em;
+      text-align: center;
+      a{
+        color: #f44336;
+      }
+    }
+    form{
+      padding: 20px;
     }
   }
 }

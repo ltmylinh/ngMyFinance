@@ -1,10 +1,14 @@
 .login{
-  margin-top: 2rem;
-  font-size: 0.75rem;
-  > * {
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-    width: 30%;
+  .footnote{
+    background-color: #FBE9E7;
+    padding: 0 20px;
+    border-top: 1px solid #607D8B;
+    font-size: 1em;
+    line-height: 3.5em;
+    text-align: center;
+    margin-top: 20px;
+    a{
+      color: #f44336;
+    }
   }
 }

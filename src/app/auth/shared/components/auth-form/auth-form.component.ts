@@ -6,8 +6,10 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['auth-form.component.scss'],
   template: `
     <div class="auth-form">
-      <ng-content select="h1"></ng-content>
-      <form [formGroup]="form" (onSubmit)="onSubmit()" novalidate>
+      <div class="frm__header">
+        <ng-content select="h1"></ng-content>
+      </div>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
         <div class="form-group">
           <label for="email">Email</label>
           <input matInput type="email" id="email" class="form-control form-control-sm" formControlName="email" placeholder="Enter your email" />
@@ -27,12 +29,16 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
         </div>
         <ng-content select="button"></ng-content>
       </form>
+      <div class="frm__footer">
+        <ng-content select=".footer_text"></ng-content>
+        <ng-content select=".error"></ng-content>
+      </div>
     </div>
   `
 })
 export class AuthFormComponent {
   @Output()
-    submitted = new EventEmitter<any>();
+    submitted = new EventEmitter<FormGroup>();
 
   form: FormGroup;
 

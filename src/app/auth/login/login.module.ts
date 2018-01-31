@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './container/login/login.component';
 
 //components
-import { LoginAccountComponent } from './components/login-account/login-account.component';
+// import { LoginAccountComponent } from './components/login-account/login-account.component';
 import { FacebookLoginComponent } from './components/facebook/facebook-login.component';
 import { GoogleLoginComponent } from './components/google/google-login.component';
 
@@ -28,7 +28,6 @@ const ROUTES: Routes = [
   ],
   declarations: [
     LoginComponent,
-    LoginAccountComponent,
     FacebookLoginComponent,
     GoogleLoginComponent
   ],
