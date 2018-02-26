@@ -50,16 +50,16 @@ if(process.env.NODE_ENV === 'production'){
         screw_ie8: true
         },
         compress: {
-        unused: true,
-        dead_code: true,
-        drop_debugger: true,
-        conditionals: true,
-        evaluate: true,
-        drop_console: true,
-        sequences: true,
-        booleans: true,
-        screw_ie8: true,
-        warnings: false
+          unused: true,
+          dead_code: true,
+          drop_debugger: true,
+          conditionals: true,
+          evaluate: true,
+          drop_console: true,
+          sequences: true,
+          booleans: true,
+          screw_ie8: true,
+          warnings: false
         },
         comments: false
     })

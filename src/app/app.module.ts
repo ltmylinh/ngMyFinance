@@ -37,6 +37,9 @@ export const ROUTES: Routes = [
         SharedModule.forRoot(),
         DashboardModule
     ],
+    exports: [
+      //AngularMaterialModule
+    ],
     declarations: [
         AppComponent,
         AppHeaderComponent,

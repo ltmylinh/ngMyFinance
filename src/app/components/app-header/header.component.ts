@@ -1,6 +1,5 @@
 import { Component, OnInit, OnDestroy, Output, EventEmitter } from '@angular/core';
 
-import { Store } from 'store';
 import { AppHeaderService } from './../shared/app-header/app-header.service';
 
 import { Observable } from 'rxjs/Observable';
@@ -18,8 +17,7 @@ export class AppHeaderComponent implements OnInit, OnDestroy{
   toggleSearch: boolean = false;
 
   constructor(
-    private headerService: AppHeaderService,
-    private store: Store
+    private headerService: AppHeaderService
   ) {}
 
   ngOnInit(){
